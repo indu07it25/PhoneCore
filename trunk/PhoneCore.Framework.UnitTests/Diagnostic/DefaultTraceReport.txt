@@ -1,0 +1,15 @@
+﻿<html>
+<head>
+<style type='text/css'>
+table {border: 1px solid black;border-width: 1px; width:auto;}
+tr.Error {background:red;} 
+tr.Fatal {background:maroon;} 
+tr.Warn {background:yellow;}
+</style>
+</head>
+<body>
+	<table>
+		{TEMPLATE_START}<tr class='{Type.Name}'><td>{Category.Name}</td><td>{Date}</td><td>{Message}</td><td>{SourceType}</td><td>{StackTrace}</td><td>{Page}</td><td>{Exception}</td></tr>{TEMPLATE_END}
+	</table>
+</body>
+</html>

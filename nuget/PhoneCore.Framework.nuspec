@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>PhoneCore.Framework</id>
+    <version>0.7.0</version>
+    <authors>Ilya Builuk</authors>
+    <owners>Ilya Builuk</owners>
+    <licenseUrl>http://phonecore.codeplex.com/license</licenseUrl>
+    <projectUrl>http://phonecore.codeplex.com/</projectUrl>
+    <!--<iconUrl></iconUrl>-->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>PhoneCore Framework is a framework which helps you to build applications on Windows Phone 7. It provides:
+navigation engine, DI container, aspect-oriented programming support, reach configuration subsystem, tracing engine, custom plugin manager, primitive types, MVVM Fwk features.
+</description>
+    <releaseNotes>MVVM Framework features support release</releaseNotes>
+    <copyright>Copyright Ilya Builuk 2012</copyright>
+    <tags>WP7 framework IoC AOP MVVM</tags>
+    <dependencies>
+    </dependencies>
+  </metadata>
+</package>

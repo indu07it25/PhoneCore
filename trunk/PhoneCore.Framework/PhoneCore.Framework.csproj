@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B1490E46-FA4F-4B2D-9021-E8846BF3ACE7}</ProjectGuid>
+    <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PhoneCore.Framework</RootNamespace>
+    <AssemblyName>PhoneCore.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <SilverlightApplication>false</SilverlightApplication>
+    <ValidateXaml>true</ValidateXaml>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Phone" />
+    <Reference Include="mscorlib.Extensions" />
+    <Reference Include="system.data.linq" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Windows.Interactivity, Version=3.8.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLight.3.0.3\lib\sl4-windowsphone71\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bootstrap\BootstrapperPlugin.cs" />
+    <Compile Include="Bootstrap\BootstrapperService.cs" />
+    <Compile Include="Bootstrap\ApplicationBootstrapper.cs" />
+    <Compile Include="Configuration\ConfigElement.cs" />
+    <Compile Include="Configuration\ConfigMerger.cs" />
+    <Compile Include="Configuration\ConfigSection.cs" />
+    <Compile Include="Configuration\ConfigSettings.cs" />
+    <Compile Include="Configuration\IConfigSection.cs" />
+    <Compile Include="Configuration\IConfigurable.cs" />
+    <Compile Include="Diagnostic\Tracing\TraceCategoryManager.cs" />
+    <Compile Include="Guard.cs" />
+    <Compile Include="IoC\ComponentExtensions.cs" />
+    <Compile Include="IoC\Container.cs" />
+    <Compile Include="Bootstrap\CoreBootstrapperPlugin.cs" />
+    <Compile Include="Diagnostic\Tracing\DefaultTraceDataContext.cs" />
+    <Compile Include="Diagnostic\Tracing\ITraceCategory.cs" />
+    <Compile Include="Diagnostic\Tracing\ITrace.cs" />
+    <Compile Include="Diagnostic\Tracing\TraceCategory.cs" />
+    <Compile Include="Diagnostic\Tracing\TraceFactory.cs" />
+    <Compile Include="Diagnostic\Tracing\TraceRecord.cs" />
+    <Compile Include="Diagnostic\Tracing\DefaultTrace.cs" />
+    <Compile Include="IoC\DependencyAttribute.cs" />
+    <Compile Include="IoC\IContainer.cs" />
+    <Compile Include="IoC\Interception\Behaviors\ProfileBehavior.cs" />
+    <Compile Include="IoC\Interception\Behaviors\TraceBehavior.cs" />
+    <Compile Include="IoC\Component.cs" />
+    <Compile Include="IoC\Interception\InterfaceInterceptor.cs" />
+    <Compile Include="IoC\LifetimeManagers\ExternalLifetimeManager.cs" />
+    <Compile Include="IoC\Interception\Behaviors\ExecuteBehavior.cs" />
+    <Compile Include="IoC\Interception\Behaviors\IBehavior.cs" />
+    <Compile Include="IoC\Interception\IInterceptor.cs" />
+    <Compile Include="IoC\Interception\IMethodReturn.cs" />
+    <Compile Include="IoC\Interception\ConfigInterfaceInterceptor.cs" />
+    <Compile Include="IoC\Interception\Proxies\IProxy.cs" />
+    <Compile Include="IoC\Interception\MethodInvocation.cs" />
+    <Compile Include="IoC\Interception\MethodReturn.cs" />
+    <Compile Include="IoC\Interception\Proxies\ProxyBase.cs" />
+    <Compile Include="IoC\Interception\InterceptionContext.cs" />
+    <Compile Include="IoC\LifetimeManagers\ILifetimeManager.cs" />
+    <Compile Include="IoC\LifetimeManagers\SingletonLifetimeManager.cs" />
+    <Compile Include="IoC\LifetimeManagers\TransientLifetimeManager.cs" />
+    <Compile Include="IoC\TypeHelper.cs" />
+    <Compile Include="Navigation\PageMapping.cs" />
+    <Compile Include="Navigation\IPageMapping.cs" />
+    <Compile Include="Views\Command\ExecuteCommandAction.cs" />
+    <Compile Include="Views\Command\ExecuteCommand.cs" />
+    <Compile Include="Views\Command\ExecuteCommand`1.cs" />
+    <Compile Include="Views\IViewModel.cs" />
+    <Compile Include="Bootstrap\IBootsrtrapperService.cs" />
+    <Compile Include="Bootstrap\IBootstrapperPlugin.cs" />
+    <Compile Include="Storage\IFileSystemService.cs" />
+    <Compile Include="Storage\ISettingService.cs" />
+    <Compile Include="Storage\IsolatedStorageFileService.cs" />
+    <Compile Include="Storage\IsolatedStorageSettingService.cs" />
+    <Compile Include="Primitive\Lazy`1.cs" />
+    <Compile Include="Navigation\INavigationService.cs" />
+    <Compile Include="Navigation\NavigationService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Primitive\Tuple`2.cs" />
+    <Compile Include="Views\ViewModelBase.cs" />
+    <Compile Include="Views\ViewPage.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <ProjectExtensions />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Import Project="..\packages\WP7-CI.1.1\tools\WP7CI.targets" />
+</Project>
